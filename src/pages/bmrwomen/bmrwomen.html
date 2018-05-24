@@ -1,0 +1,36 @@
+<!--
+  Generated template for the BmrwomenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>เพศหญิง</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>อายุ</ion-label>
+          <ion-input [(ngModel)]="numberA" type="number" value=""></ion-input>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label floating>น้ำหนัก</ion-label>
+            <ion-input [(ngModel)]="numberB" type="number" value=""></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>ส่วนสูง(ซม.)</ion-label>
+              <ion-input [(ngModel)]="numberC" type="number" value=""></ion-input>
+            </ion-item>
+      
+      </ion-list>
+      
+      <button ion-button color="secondary" (click) ="addBtn()" >คำณวน</button>
+</ion-content>

@@ -1,0 +1,32 @@
+<!--
+  Generated template for the TdeePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>TDEE</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>BMR</ion-label>
+          <ion-input [(ngModel)]="numberA" type="number" value=""></ion-input>
+        </ion-item>
+         
+        
+      </ion-list>
+      
+      <button ion-button full color="secondary" (click) ="performFunction('a')" >ไม่เคยออกำลังเลย</button>
+      <button ion-button full color="secondary" (click) ="performFunction('b')" >1-3 ครั้งต่อสัปดาห์</button>
+      <button ion-button full color="secondary" (click) ="performFunction('c')" >4-5 ครั้งต่อสัปดาห์</button>
+      <button ion-button full color="secondary" (click) ="performFunction('d')" >6-7 ครั้งต่อสัปดาห์</button>
+      <button ion-button full color="secondary" (click) ="performFunction('e')" >วันละ 2 ครั้งขึ้นไป</button>
+</ion-content>

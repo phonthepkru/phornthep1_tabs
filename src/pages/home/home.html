@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        BMI
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        BMR
+      </ion-segment-button>
+      <ion-segment-button value="puppies2">
+        TDEE
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+        <ion-item>
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/bmr.jpg">
+            </ion-thumbnail>
+            <h2>การหาค่าBMR</h2>
+            <button ion-button clear (click)="bmrpage()">ตกลง</button>
+          </ion-item>
+      
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'puppies2'">
+        <ion-item>
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/tdee.jpg">
+            </ion-thumbnail>
+            <h2>การหาค่าTDEE</h2>
+            <button ion-button clear (click)="tdeepage()">ตกลง</button>
+          </ion-item>
+        
+      </ion-list>
+  
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/imgs/bmi.jpg">
+        </ion-thumbnail>
+        <h2>การหาค่าBMI</h2>
+        <button ion-button clear (click)="bmipage()">ตกลง</button>
+      </ion-item>
+      
+     
+    </ion-list>
+  </div>
+</ion-content>
